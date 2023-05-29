@@ -3,15 +3,16 @@
 export const AddTask = ({addTasks, setAddTasks, editTask, setEditTask}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    const time = new Date();
 
     if(editTask.id){
+      const time = new Date();
       const checkFromList = addTasks.map((addTask)=>(
         addTask.id === editTask.id ? {id:editTask.id, name: editTask.name, date:`${time.toLocaleDateString()} — ${time.toLocaleTimeString()}`} : addTask
       ))
       setAddTasks(checkFromList)
       setEditTask({})
     }else{
+      const time = new Date();
       const makeTaskObj = {
         id: time.getMilliseconds(),
         name: e.target.input.value,
