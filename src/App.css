@@ -2,11 +2,14 @@
     margin: 0;
     padding: 0;
     font-family: 'Merriweather', serif;
+    font-size: 1.2rem;
   }
 
   .header{
     padding: 10px;
     background-color: var(--card-container-bg);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     max-width: 800px;
     margin: auto;
     display: flex;
@@ -61,3 +64,31 @@
   .header .bg .gradient{
     background-image: linear-gradient(8deg, #6e5df1, #a56cbc, #c27f86, #d3924c)
   }
+
+  .addTask{
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .addTask form{
+    margin: 1rem auto;
+  }
+  .addTask input{
+    padding: 5px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .addTask button{
+    background-color: var(--button-submit);
+    padding: 5px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .addTask button:active{
+    background-color: var(--button-submit-active);
+  }
+
