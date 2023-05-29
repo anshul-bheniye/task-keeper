@@ -5,6 +5,10 @@
     font-size: 1.2rem;
   }
 
+  body{
+    height: 100vh;
+  }
+
   .header{
     padding: 10px;
     background-color: var(--card-container-bg);
@@ -49,20 +53,20 @@
     height: 30px;
   }
 
-  .header .bg .neutral{
+   .neutral{
     background-color: var(--header-neutral);
   }
 
-  .header .bg .med-dark{
+ .med-dark{
     background-color: var(--header-mid-dark);
   }
 
-  .header .bg .dark{
+ .dark{
     background-color: var(--header-dark);
   }
 
-  .header .bg .gradient{
-    background-image: linear-gradient(8deg, #6e5df1, #a56cbc, #c27f86, #d3924c)
+ .gradient{
+  background: linear-gradient(115deg, #ed12b2, #3af2fc)
   }
 
   .addTask{
@@ -92,3 +96,83 @@
     background-color: var(--button-submit-active);
   }
 
+  .showTask{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: var(--card-container-bg);
+    max-width: 800px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: auto;
+  }
+
+  .showTask .container-head{
+    width: 700px;
+    padding: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+  }
+
+  .showTask .container-head .make-btn{
+    background-color: var(--button-clear);
+    padding:5px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .showTask .container-head .make-btn:active{
+    background-color: var(--button-clear-active);
+  }
+
+ .showTask .container-body{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+ }
+ 
+ .showTask .container-body li{
+  list-style: none;
+  margin: 10px;
+  background-color: #d1d5db;
+  padding: 10px;
+ }
+
+ .showTask .container-body .group{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+ }
+
+ .showTask .container-body .group .name{
+  font-size: 1.1rem;
+ }
+
+ .showTask .container-body .group .icon i{
+  margin-left: 10px;
+  font-size: 1rem;
+ }
+
+ .showTask .container-body .time{
+  font-size: 15px;
+ }
+
+ .showTask i.bi-pencil-square{
+  font-size: 18px;
+  color: #1363DF;
+  cursor: pointer;
+}
+
+.showTask i.bi-trash{
+  font-size: 18px;
+  color: #D82148;
+  cursor: pointer;
+}
+
+
+ @media only screen and (max-width: 800px) {
+  .showTask li{
+    width: 100%;
+  }
+}
