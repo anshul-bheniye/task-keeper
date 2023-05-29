@@ -12,18 +12,20 @@ export const ShowTask = ({addTasks, setAddTasks, editTask, setEditTask}) => {
   }
 
   return (
-    <div>
-      <p onClick= { ()=>{ setAddTasks('') } } >Clear All</p>
-      <p>{addTasks.length}</p>
-      <ul>
+    <div className='showTask'>
+      <div className='container-head'>
+        <p onClick= { ()=>{ setAddTasks('') } } >Clear All</p>
+        <p>{addTasks.length}</p>
+      </div>
+      <ul className='container-body'>
         {addTasks && addTasks.map((addTask)=>(
           <li key={addTask.id}>
             <p>
-                <span className="name">{addTask.name}</span>
-                <span className="time">{addTask.date}</span>
+                <span className='name'>{addTask.name}</span>
+                <span className='time'>{addTask.date}</span>
             </p>
-            <i onClick={() => handleEdit(addTask.id)} className="bi bi-pencil-square"></i>
-            <i onClick={() => handleDelete(addTask.id)} className="bi bi-trash"></i>
+            <i onClick={() => handleEdit(addTask.id)} className='bi bi-pencil-square'></i>
+            <i onClick={() => handleDelete(addTask.id)} className='bi bi-trash'></i>
         </li>
         ))}
       </ul>

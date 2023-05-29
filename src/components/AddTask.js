@@ -22,7 +22,7 @@ export const AddTask = ({addTasks, setAddTasks, editTask, setEditTask}) => {
     }
   }
   return (
-    <div>
+    <div className='addTask'>
       <form onSubmit={handleSubmit}>
       <input 
       type='text' 
@@ -33,7 +33,7 @@ export const AddTask = ({addTasks, setAddTasks, editTask, setEditTask}) => {
       value={editTask.name || ''}
       onChange={(e)=> setEditTask({...editTask, name:e.target.value})}
       />
-      <button type="submit">ADD</button>
+      <button type='submit'>ADD</button>
       </form>
     </div>
   )
