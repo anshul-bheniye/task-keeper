@@ -3,3 +3,61 @@
     padding: 0;
     font-family: 'Merriweather', serif;
   }
+
+  .header{
+    padding: 10px;
+    background-color: var(--card-container-bg);
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header .brand{
+    display: flex;
+    align-items: center;
+  }
+
+  .header .brand img{
+    border-radius: 50%;
+    height: 50px;
+    cursor: pointer;
+  }
+
+  .header .brand span{
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+  .header .bg .dot{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5px;
+    cursor: pointer;
+    border: 1px solid #dfdfdf;
+  }
+
+  .header .bg .active{
+    width: 30px;
+    height: 30px;
+  }
+
+  .header .bg .neutral{
+    background-color: var(--header-neutral);
+  }
+
+  .header .bg .med-dark{
+    background-color: var(--header-mid-dark);
+  }
+
+  .header .bg .dark{
+    background-color: var(--header-dark);
+  }
+
+  .header .bg .gradient{
+    background-image: linear-gradient(8deg, #6e5df1, #a56cbc, #c27f86, #d3924c)
+  }
