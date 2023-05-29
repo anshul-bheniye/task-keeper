@@ -13,8 +13,10 @@ export const ShowTask = ({addTasks, setAddTasks, editTask, setEditTask}) => {
 
   return (
     <div>
+      <p onClick= { ()=>{ setAddTasks('') } } >Clear All</p>
+      <p>{addTasks.length}</p>
       <ul>
-        {addTasks.map((addTask)=>(
+        {addTasks && addTasks.map((addTask)=>(
           <li key={addTask.id}>
             <p>
                 <span className="name">{addTask.name}</span>
