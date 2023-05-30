@@ -164,10 +164,19 @@
   cursor: pointer;
 }
 
+.showTask i.bi-pencil-square:active{
+   color: lightseagreen;
+}
+
 .showTask i.bi-trash{
   font-size: 18px;
   color: #D82148;
   cursor: pointer;
+}
+
+.showTask i.bi-trash:active{
+   color: lightcoral;
+
 }
 
 
